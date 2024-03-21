@@ -40,7 +40,7 @@ public class BookController {
                 .orElse(new ResponseEntity<Book>(HttpStatus.NOT_FOUND));
     }
 
-    @GetMapping(path = "/books")
+    @GetMapping(path = "/books/list-info")
     public ResponseEntity<Iterable<Book>> listBooks() {
         return new ResponseEntity<Iterable<Book>>(bookService.listBooks(), HttpStatus.OK);
     }

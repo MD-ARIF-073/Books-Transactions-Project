@@ -27,13 +27,6 @@ public class BookServiceImpl implements BookService {
         this.authorRepository = authorRepository;
     }
 
-    /**
-     * WARNING - This is a very VERY contrived example.
-     *
-     * There are easier ways to code this logic when you're not
-     * demonstrating transactions -- take a look as Hibernate cascades!
-     */
-
     @Override
     public Book save(final Book book) {
         if(null == book.getAuthor()) {
